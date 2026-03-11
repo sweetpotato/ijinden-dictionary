@@ -6,5 +6,6 @@ local $/ = undef;
 $_ = <>;
 $_ = Encode::decode('utf-8', $_);
 s|<title>.*?</title>|<title>イジンブックへようこそ</title>|s;
+s|<h1 class="title">index</h1>|<h1 class="title">イジンブックへようこそ</h1>|;
 $_ = Encode::encode('utf-8', $_);
 print;
