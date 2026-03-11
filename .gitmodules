@@ -1,0 +1,3 @@
+[submodule "ijinden-deck-builder"]
+	path = ijinden-deck-builder
+	url = git@github.com:sweetpotato/ijinden-deck-builder.git

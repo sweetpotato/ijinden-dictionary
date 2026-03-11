@@ -1,0 +1,10 @@
+use strict;
+use warnings;
+use utf8;
+use Encode;
+local $/ = undef;
+$_ = <>;
+$_ = Encode::decode('utf-8', $_);
+s|(</div>\s*</div>)|$1\r\n<hr>\r\n<div class="footer">\r\n<p>(c) 2026 sweetpotato</p>\r\n</div>|s;
+$_ = Encode::encode('utf-8', $_);
+print;

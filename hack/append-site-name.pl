@@ -1,0 +1,10 @@
+use strict;
+use warnings;
+use utf8;
+use Encode;
+local $/ = undef;
+$_ = <>;
+$_ = Encode::decode('utf-8', $_);
+s|<title>(.*?)</title>|<title>$1 - イジンブック</title>|s;
+$_ = Encode::encode('utf-8', $_);
+print;
