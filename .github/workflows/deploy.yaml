@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - run: apt install jq perl
+      - run: sudo apt install jq perl
 
       - run: ./hack/pre-commit-idemp.sh
 
