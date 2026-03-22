@@ -23,6 +23,10 @@
     --table-border-color: #516ab6;
 }
 
+a {
+   word-break: break-all;
+}
+
 a.fnref {
     font-size: smaller;
     text-decoration: none;
@@ -44,7 +48,9 @@ blockquote {
     border-width: 1px 1px 1px 8px;
     color: var(--blockquote-text-color);
     margin-left: 0;
+    margin-right: 0;
     padding-left: 24px;
+    padding-right: 24px;
 }
 
 body {
@@ -152,6 +158,10 @@ hr.short {
 }
 
 img {
+    max-width: 100%;
+}
+
+li {
     max-width: 100%;
 }
 
