@@ -5,7 +5,7 @@ set -Cxueo pipefail
 bin="$(dirname "${BASH_SOURCE[0]}")"
 cd "${bin}"
 
-jq -c '.[]' ../ijinden-deck-builder/src/commons/cards.json |
+jq -c 'reverse|.[]' ../ijinden-deck-builder/src/commons/cards.json |
   perl append-rule-text.pl
 
 find ../public -mindepth 1 -maxdepth 1 -name '*.html' -print0 |
