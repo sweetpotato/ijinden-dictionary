@@ -1,65 +1,18 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy"
-            content="script-src 'nonce-B24FFCA7-0426-47E1-9066-1D7C79F80C95' 'wasm-unsafe-eval' 'strict-dynamic';">
-
-    <link rel="stylesheet" href="./css/light/wiki.css">
-    <title>index</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./css/light/wiki.css">
+<title>イジンブックは移動しました</title>
 </head>
 <body>
-    <h1 class="title">index</h1>
-    <div class="main">
-        <div id="content">
+<h1 class="title">イジンブックは移動しました</h1>
+<div class="main">
+<div id="content">
 <p>このサイトは次のURLに移動しました。</p>
 <p><a href="https://wikiwiki.jp/ijinden/">https://wikiwiki.jp/ijinden/</a></p>
 </div>
-
-    </div>
-    <script type="module" nonce="B24FFCA7-0426-47E1-9066-1D7C79F80C95">
-        function addCopyButtons() {
-            const pres = document.querySelectorAll('pre');
-            pres.forEach(pre => {
-                if (pre.className === 'text') {
-                    // For Text Style. Do not add copy button.
-                    return;
-                }
-                let code = pre.querySelector('code');
-                if (!code) {
-                    // For PukiWiki Style. If there is no <code> inside <pre>, wrap the content with <code>.
-                    const newCode = document.createElement('code');
-                    newCode.innerHTML = pre.innerHTML;
-                    pre.innerHTML = '';
-                    pre.appendChild(newCode);
-                    code = newCode;
-                }
-
-                const button = document.createElement('button');
-                button.className = 'copy-button';
-                button.textContent = 'Copy';
-
-                button.addEventListener('click', () => {
-                    navigator.clipboard.writeText(code.innerText).then(() => {
-                        button.textContent = 'Copied!';
-                        setTimeout(() => {
-                            button.textContent = 'Copy';
-                        }, 2000);
-                    }).catch(err => {
-                        console.error('Failed to copy text: ', err);
-                        button.textContent = 'Error';
-                         setTimeout(() => {
-                            button.textContent = 'Copy';
-                        }, 2000);
-                    });
-                });
-
-                pre.appendChild(button);
-            });
-        }
-
-        addCopyButtons();
-    </script>
+</div>
 </body>
 </html>
